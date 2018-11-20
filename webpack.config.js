@@ -23,7 +23,9 @@ module.exports = {
 	resolve: {
 		alias: {
 			page: path.resolve(__dirname,'src/page'),
-			component: path.resolve(__dirname,'src/component')
+			component: path.resolve(__dirname,'src/component'),
+			util: path.resolve(__dirname,'src/util'),
+			service: path.resolve(__dirname,'src/service')
 		}
 	},
 
@@ -123,12 +125,24 @@ module.exports = {
 
 	devServer: {
 	    contentBase: path.resolve(__dirname, 'dist'),
-	    //watchContentBase: true,
 	    port: 8088,
 	    publicPath: '/dist/',
         inline: true,
         hot: true,
-        //hotOnly: true,
-        open: true
+        open: true,
+        openPage: 'login',
+        proxy: {
+        	'/manage': {
+        		target: 'http://adminv2.happymmall.com',
+        		changeOrigin: true
+        	},
+        	'/user/logout.do': {
+        		target: 'http://adminv2.happymmall.com',
+        		changeOrigin: true
+        	}
+        },
+        
+        compress: true, //gzip压缩
+        historyApiFallback: true
     }
 }

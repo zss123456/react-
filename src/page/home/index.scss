@@ -1,0 +1,33 @@
+
+.color-box {
+	display: block;
+	height: 160px;
+	text-align: center;
+	padding: 20px 0;
+	opacity: .9;
+	transition: all .3s;
+	&:link {
+		text-decoration: none;
+	}
+	&:visited{
+		text-decoration: none;
+		color: #fff;
+	}
+	&:hover {
+		text-decoration: none;
+		color: orangered;
+		opacity: 1;
+		transform: scale(1.04);
+	}
+	&:active {
+		text-decoration: none;
+	}
+	.count {
+		font-size: 50px;
+		height: 80px;
+		line-height: 80px;
+	}
+	.desc {
+		font-size: 18px;
+	}
+}

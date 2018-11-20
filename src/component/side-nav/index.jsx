@@ -34,7 +34,7 @@ class SideNav extends Component {
 	                    </li>
 	                    <li className={this.state.productState ? "active" : ""}>
 	                        <Link to="/product" onClick={this.handleClick.bind(this,"productState")}>
-	                        	<i className="fa fa-sitemap"></i>
+	                        	<i className="fa fa-list"></i>
 	                        	<span>商品</span>
 	                        	<span className="fa arrow"></span>
 	                        </Link>
@@ -53,7 +53,7 @@ class SideNav extends Component {
 	                    </li>
 	                    <li className={this.state.orderState ? "active" : ""}>
 	                        <Link to="/order" onClick={this.handleClick.bind(this,"orderState")}>
-	                        	<i className="fa fa-sitemap"></i>
+	                        	<i className="fa fa-check-square-o"></i>
 	                        	<span>订单</span>
 	                        	<span className="fa arrow"></span>
 	                        </Link>
@@ -67,7 +67,7 @@ class SideNav extends Component {
 	                    </li>
 	                    <li className={this.state.userState ? "active" : ""}>
 	                        <Link to="/user" onClick={this.handleClick.bind(this,"userState")}>
-	                        	<i className="fa fa-sitemap"></i>
+	                        	<i className="fa fa-user-o"></i>
 	                        	<span>用户</span>
 	                        	<span className="fa arrow"></span>
 	                        </Link>
